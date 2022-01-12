@@ -2,13 +2,20 @@
 
 
 //OVERALL
-
-
+@import './main/fonts.scss';
+@import './main/anim.scss';
+@import './main/vars.scss';
+@import './main/global.scss';
 
 //BLOCKS
+@import './blocks/header.scss';
+@import './blocks/top.scss';
+@import './blocks/bg.scss';
+@import './blocks/topTimer.scss';
+@import './blocks/topAction.scss';
 
 
+//PAGES
 
-//MEDIA
 
 

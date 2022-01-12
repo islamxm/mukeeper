@@ -1,0 +1,11 @@
+// COLORS
+$text-wt: #FDFBE5;
+$text-dr: #3B444D;
+$text-bl: #013865;
+$gray-d: #A0A5B4;
+$gray-l: #D6DBE8;
+$blue: #019EC8;
+
+@mixin default-anim {
+    transition: all .2s ease;
+}

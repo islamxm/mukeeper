@@ -1,0 +1,7 @@
+@import './font-face.scss'; 
+
+@include font-face("GothamPro", "GothamPro-Black", 900);
+@include font-face("GothamPro", "GothamPro-Bold", 700);
+@include font-face("GothamPro", "GothamPro-Light", 300);
+@include font-face("GothamPro", "GothamPro-Medium", 500);
+@include font-face("GothamPro", "GothamPro", 400);
