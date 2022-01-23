@@ -1765,6 +1765,14 @@ input[class=input]:focus {
   width: 48%;
   margin-bottom: 18px;
 }
+.reg__form_main_item input {
+  margin-bottom: 10px;
+}
+.reg__form_main_item_ex {
+  font-size: 14px;
+  line-height: 18px;
+  color: #5F6C76;
+}
 .reg__form_action {
   display: -webkit-box;
   display: -ms-flexbox;
