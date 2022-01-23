@@ -1,12 +1,8 @@
-.topAction {
-    position: absolute;
-    bottom: 20vh;
-    width: 1200px;
+.mainAction {
     display: flex;
-    left: calc(50% - (1200px / 2));
-    display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
+
 
     &__btn {
         display: flex;
@@ -15,6 +11,10 @@
         justify-content: center;
         position: relative;
         overflow: hidden;
+        
+        &:hover {
+            transform: scale(1.03);
+        }
         
         &_ct {
             position: relative;
@@ -52,7 +52,7 @@
             filter: drop-shadow(0px 4px 35px rgba(92, 221, 255, 1));
         }
 
-        .topAction__btn_bg {
+        .mainAction__btn_bg {
             position: absolute;
             z-index: 0;
             top: 0;
@@ -77,7 +77,7 @@
 
 
 
-        .topAction__btn_bg {
+        .mainAction__btn_bg {
             position: absolute;
             z-index: 0;
             top: 0;
@@ -100,7 +100,7 @@
             filter: drop-shadow(0px 8px 40px rgba(255, 195, 79, 1));
         }
 
-        .topAction__btn_bg {
+        .mainAction__btn_bg {
             position: absolute;
             z-index: 0;
             top: 0;

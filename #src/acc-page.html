@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.min.css">
+</head>
+<body>
+    <div class="wrapper">
+        <!-- @@include('./blocks/header.html') -->
+
+        <header class="header">
+            <div class="header__bg">
+                <img src="./img/top-bg-test-min.png" alt="">
+            </div>
+            <div class="container">
+                <div class="header__inner">
+        
+                    <div class="header__nav header__nav-left">
+                        <a href="#" class="header__nav_item">Главная</a>
+                        <a href="#" class="header__nav_item">Регистрация</a>
+                        <a href="#" class="header__nav_item">Скачать</a>
+                    </div>
+                    <a href="#" class="header__logo">
+                        <picture>
+                            <source type="image/webp" srcset="">
+                            <img src="./img/logo@1x.png" alt="Logotype">
+                        </picture>
+                    </a>
+                    <div class="header__nav header__nav-right">
+                        <a href="#" class="header__nav_item">Новости</a>
+                        <a href="#" class="header__nav_item">FAQ</a>
+                        <a href="#" class="header__nav_item header__nav_item_login">Войти</a>
+                    </div>
+                    
+                </div>
+            </div>
+        </header>
+
+        
+
+        <div class="main ex-page">
+            <section class="acc">
+                <div class="container">
+                    <div class="sectionHead">
+                        <div class="sectionHead__title">
+                            Личный кабинет
+                        </div>
+                    </div>
+
+                    <div class="acc__in">
+
+                        <div class="acc__ex">
+                            Личный кабинет будет доступен 12.10.2021
+                        </div>
+
+                        <form class="acc__form">
+                            <h3 class="acc__form_title">
+                                Восстановить пароль
+                            </h3>
+
+                            <div class="acc__form_main">
+                                <input class="input" type="text" placeholder="Электронная почта">
+                            </div>
+
+                            <div class="acc__form_check">
+                                <div class="acc__form_check_info">
+                                    В поле "Проверка" напишите
+                                </div>
+
+                                <div class="acc__form_check_content">
+                                    Ответ на пример: 89 + 80
+                                </div>
+
+                                <input type="text" class="input" placeholder="Проверка">
+
+                                <button type="submit" class="button">Проверка</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+        <!-- Footer -->
+        @@include('./blocks/footer.html')
+    </div>
+   
+
+
+    <script defer src="./js/bundle.js"></script>
+</body>
+</html>

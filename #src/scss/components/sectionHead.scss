@@ -1,0 +1,25 @@
+.sectionHead {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+
+    &__title {
+        padding-bottom: 52px;
+        position: relative;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 46px;
+        text-align: center;
+        color: $text-bl;
+        text-transform: uppercase;
+
+        &:after {
+            position: absolute;
+            content: url('../img/title-bottom.svg');
+            left: calc(50% - (243px / 2));
+            bottom: 0;
+        }
+    }
+
+}

@@ -1,5 +1,5 @@
 //LIBS
-
+@import './libs/swiper.scss';
 
 //OVERALL
 @import './main/fonts.scss';
@@ -10,12 +10,31 @@
 //BLOCKS
 @import './blocks/header.scss';
 @import './blocks/top.scss';
-@import './blocks/bg.scss';
-@import './blocks/topTimer.scss';
-@import './blocks/topAction.scss';
+@import './blocks/event.scss';
+@import './blocks/news.scss';
+@import './blocks/chars.scss';
+@import './blocks/media.scss';
+@import './blocks/footer.scss';
+@import './blocks/descr.scss';
+
+// COMPONENTS
+@import './components/mainBg.scss';
+@import './components/mainTimer.scss';
+@import './components/mainAction.scss';
+@import './components/sliderNav.scss';
+@import './components/sectionHead.scss';
+@import './components/input.scss';
+@import './components/button.scss';
+@import './components/customScroll.scss';
 
 
 //PAGES
-
+@import './pages/reg-page.scss';
+@import './pages/acc-page.scss';
+@import './pages/download-page.scss';
+@import './pages/news-page.scss';
+@import './pages/faq-page.scss';
+@import './pages/donate-page.scss';
+@import './pages/online-page.scss';
 
 

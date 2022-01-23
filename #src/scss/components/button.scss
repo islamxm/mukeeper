@@ -1,0 +1,17 @@
+.button {
+    padding: 15px 48px;
+    background: linear-gradient(180deg, #09C4DB 0%, #054C76 100%);
+    box-shadow: 0px 11px 20px rgba(1, 56, 101, 0.3);
+    @include default-anim;
+    color: $text-wt;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 20px;
+
+
+    &:hover {
+        transform: scale(1.05);
+        background: linear-gradient(180deg, #09C4DB 0%, $text-bl 100%);
+    }
+}

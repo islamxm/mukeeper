@@ -34,6 +34,9 @@
     "webpack-stream": "^6.1.2"
   },
   "browserslist": [
-    ">0.1%"
-  ]
+    ">5%"
+  ],
+  "dependencies": {
+    "swiper": "^7.3.1"
+  }
 }

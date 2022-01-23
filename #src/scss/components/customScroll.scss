@@ -1,0 +1,14 @@
+.custom-scroll {
+    overflow: scroll !important; 
+
+    &::-webkit-scrollbar {
+        width: 11px;
+        background-color: transparent;
+        height: 11px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: $gray-l;
+        border-radius: 10px;
+        
+    }
+}

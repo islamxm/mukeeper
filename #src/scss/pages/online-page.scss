@@ -1,0 +1,127 @@
+.online {
+
+    &__in {
+
+    }
+
+    &__head {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+
+        &_val {
+            padding: 15px 27px;
+            background-color: $gray-l;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            line-height: 20px;
+            color: #5F6C76;
+            margin-right: 15px;
+
+            span {
+                font-weight: 700;
+            }
+        }
+
+        &_ls {
+            margin-left: 15px;
+            font-size: 16px;
+            line-height: 24px;
+            color: #5F6C76;
+            &_name {
+
+            }
+
+            &_val {
+                font-weight: 700;
+            }
+        }
+    }
+
+
+    &__body {
+        position: relative;
+
+        &:after {
+            position: absolute;
+            content: '';
+        }
+
+        
+    }
+
+    &__btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__tw {
+        max-height: 480px;
+        margin-bottom: 100px;
+    }
+
+    &__table {
+        overflow: scroll;
+        width: 100%;
+        border-spacing: 0;
+        border-collapse: collapse;
+        
+
+        
+
+        th {
+            padding: 7.5px 10px;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+        }
+
+        td {
+            text-align: center;
+            padding: 7.5px 10px;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+        }
+
+        &_row.online__table_headrow {
+            background-color: #fff;
+        }
+
+        &_row {
+            background-color: #F7F7FA;
+            cursor: pointer;
+            &:nth-child(odd) {
+                background-color: #fff;
+            }
+
+            @include default-anim;
+
+            &:hover {
+                background-color: $gray-l;
+            }
+        }
+
+        &_head {
+
+        }
+
+        &_d {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            color: $text-dr;
+        }
+
+        &_d.bold {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 24px;
+            
+        }
+    }
+}

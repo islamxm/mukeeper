@@ -1,0 +1,43 @@
+.newsp {
+
+    &__in {
+
+    }
+
+    &__list {
+
+    }
+
+    &__item {
+        padding-bottom: 42px;
+        border-bottom: 1px solid #D6DBE8;
+        margin-bottom: 40px;
+        &_head {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            .date {
+                font-weight: 700;
+                color: #fff;
+                padding: 6px 10px;
+                background-color: $gray-d;
+                font-size: 14px;
+                line-height: 13px;
+                margin-right: 24px;
+            }
+
+            .title {
+                color: $text-bl;
+                font-weight: 700;
+                text-transform: uppercase;
+                font-size: 30px;
+                line-height: 32px;
+            }
+        }
+
+        &_body {
+            font-size: 18px;
+            line-height: 28px;
+        }
+    }
+}

@@ -1,0 +1,24 @@
+.descr {
+
+    &__in {
+
+    }
+
+    &__title {
+        text-align: center;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 32px;
+        max-width: 900px;
+        margin: 0 auto;
+        font-style: italic;
+        color: $text-dr;
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        text-align: center;
+        font-size: 18px;
+        line-height: 28px;
+    }
+}

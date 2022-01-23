@@ -1,0 +1,66 @@
+.acc {
+
+
+    &__in {
+        max-width: 400px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    &__ex {
+        margin-bottom: 42px;
+        font-size: 16px;
+        line-height: 24px;
+        color: #5F6C76;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    &__form {
+        padding: 0 25px;
+
+        &_title {
+            color: $text-bl;
+            text-transform: uppercase;
+            font-size: 22px;
+            line-height: 28px;
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 22px;
+        }
+
+        &_main {
+            margin-bottom: 30px;
+        }
+
+        &_check {
+
+            &_info {
+                text-align: center;
+                line-height: 24px;
+                color: #5F6C76;
+                margin-bottom: 10px;
+            }
+
+            &_content {
+                background-color: $gray-l;
+                padding: 15px 15px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #5F6C76;
+                line-height: 20px;
+                margin-bottom: 20px;
+            }
+
+            .input {
+                margin-bottom: 20px;
+            }
+
+            .button {
+                width: 100%;
+            }
+        }
+    }
+}

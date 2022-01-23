@@ -1,10 +1,9 @@
-.topTimer {
+.mainTimer {
+    max-width: 490px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    width: 490px;
-    position: absolute;
-    left: calc(50% - (490px / 2));
-    top: 50vh;
+
 
     &__item {
         background-image: url('../img/top-timer-item-bg.svg');

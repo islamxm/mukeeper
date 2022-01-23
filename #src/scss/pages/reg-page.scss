@@ -1,0 +1,66 @@
+.reg {
+
+
+    &__in {
+        max-width: 786px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    &__ex {
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 50px;
+
+        span {
+            font-weight: 700;
+            color: $red;
+        }
+    }
+
+    &__form {
+
+        &_main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 24px;
+            &_item {
+                width: 48%;
+                margin-bottom: 18px;
+
+            }
+        }
+
+        &_action {
+            display: flex;
+            justify-content: space-between;
+
+            &_check {
+                width: 48%;
+
+                &_info {
+                    margin-bottom: 10px;
+                    color: #5F6C76;
+                    line-height: 24px;
+                }
+                &_content { 
+                    background-color: $gray-l;
+                    padding: 15px 15px;
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #5F6C76;
+                    line-height: 20px;
+                    margin-bottom: 20px;
+                }
+            }
+
+            &_btn {
+                max-width: 302px;
+                padding-top: 32px;
+            }
+        }
+    }
+}

@@ -1,0 +1,47 @@
+.donate {
+
+    &__in {
+        max-width: 786px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    &__main {
+        margin-bottom: 30px;
+        line-height: 24px;
+    }
+
+    &__ex {
+        line-height: 24px;
+        margin-bottom: 38px;
+        span {
+            display: block;
+            color: $red;
+            font-weight: 700;
+        }
+    }
+
+    &__link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 57px;
+        
+        &_label {
+            margin-bottom: 20px;
+            line-height: 24px;
+            color: $text-dr;
+        }
+
+        &_btn {
+            padding: 20px 98px;
+        }
+    }
+
+    &__info {
+        text-align: center;
+        span {
+            display: block;
+        }
+    }
+}

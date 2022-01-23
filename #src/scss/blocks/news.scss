@@ -1,0 +1,108 @@
+.news {
+    padding: 40px 0;
+    &__in {
+        
+        
+    }
+
+    &__slider {
+        position: relative;
+        &_wr {
+            padding-bottom: 50px;
+        }
+
+        &_nav {
+            // position: absolute;
+            // bottom: 0;
+            // display: flex;
+            // left: calc(50% - ());
+            display: flex;
+            justify-content: center;
+            
+
+        }
+
+        .slider__btn_prev {
+            margin: 0 10px;
+            border-color: #D6DBE8;
+            position: static;
+
+            svg {
+                path {
+                    fill: #A0A5B4;
+                }
+            }
+        }
+
+        .slider__btn_next {
+            margin: 0 10px;
+            border-color: #D6DBE8;
+            position: static;
+
+            svg {
+                path {
+                    fill: #A0A5B4;
+                }
+            }
+        }
+    }
+
+    &__slide {
+        
+
+        &_head {
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 28px;
+            color: $text-bl;
+            margin-bottom: 14px;
+        }
+
+        &_descr {
+            font-size: 18px;
+            line-height: 28px;
+            margin-bottom: 53px;
+        }
+
+        &_foot {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &_date {
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 13px;
+                color: $gray-d;
+            }
+
+            &_link {
+                display: inline-block;
+                padding: 8.5px 30px;
+                background-color: $gray-d;
+                @include default-anim;
+                position: relative;
+                font-weight: 700;
+                font-size: 14px;
+                text-transform: uppercase;
+                color: #fff;
+                line-height: 13px;
+
+                &:after {
+                    position: absolute;
+                    content: '';
+                    height: 15px;
+                    width: 15px;
+                    transform: rotate(45deg);
+                    left: -7.5px;
+                    top: calc(50% - 7.5px);
+                    background-color: #fff;
+                }
+
+                &:hover {
+                    background-color: $text-bl;
+                }
+            }
+        }
+    }
+}
