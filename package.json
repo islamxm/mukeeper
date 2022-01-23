@@ -37,6 +37,6 @@
     ">5%"
   ],
   "dependencies": {
-    "swiper": "^7.3.1"
+    "swiper": "^5.3.0"
   }
 }
