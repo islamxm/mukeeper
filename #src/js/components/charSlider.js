@@ -1,4 +1,4 @@
-import Swiper, {Thumbs, Navigation, EffectFade} from "swiper"
+import Swiper, {Thumbs, Navigation, EffectFade} from "swiper";
 
 export const charSlider = () => {
 
@@ -6,6 +6,8 @@ export const charSlider = () => {
         modules: [Navigation],
         slidesPerView: 5,
         spaceBetween: 100,
+        // slidesOffsetBefore: 25,
+        // slidesOffsetAfter: 25
         // navigation: {
         //     nextEl: '.slider__btn_next',
         //     prevEl: '.slider__btn_prev'
@@ -16,10 +18,10 @@ export const charSlider = () => {
     var charMainSlider = new Swiper('.chars__slider', {
         modules: [Thumbs, EffectFade],
         slidesPerView: 1,
-        // effect: 'fade',
-        // fadeEffect: {
-        //     crossFade: true
-        // },
+        effect: 'fade',
+        fadeEffect: {
+            crossFade: true
+        },
         thumbs: {
             swiper: charThumbSlider
         }

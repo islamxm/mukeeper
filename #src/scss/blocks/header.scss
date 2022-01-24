@@ -32,13 +32,14 @@
     &__nav {
         display: flex;
         justify-content: space-between;
-        padding-top: 20px;
+        
         align-items: flex-start;
         
         &_item {
             color: $text-wt;
             font-weight: 700;
             text-transform: uppercase;
+            padding-top: 20px;
             padding-bottom: 12px;
             position: relative;
             margin: 0 15px;
@@ -62,6 +63,40 @@
                 }
             }
             
+        }
+
+        &_item.header__nav_item_login {
+            display: flex;
+            align-items: center;
+            padding-top: 0;
+
+            &:after {
+                display: none;
+            }
+
+            .login__icon {
+                background-image: url('../img/login-br.svg');
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                width: 50px;
+                height: 50px;
+                margin-right: 7px;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .login__tx {
+                max-width: 70px;
+
+                span {
+                    font-size: 12px;
+                    line-height: 11px;
+                    text-transform: capitalize;
+                }
+            }
         }
 
     }

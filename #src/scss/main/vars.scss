@@ -1,12 +1,12 @@
 // COLORS
-$text-wt: #FDFBE5;
-$text-dr: #3B444D;
-$text-bl: #013865;
-$gray-d: #A0A5B4;
-$gray-l: #D6DBE8;
-$blue: #019EC8;
-$green: #83D300;
-$red: #E8002A;
+$text-wt: rgb(253, 251, 229);
+$text-dr: rgb(59, 68, 77);
+$text-bl: 	rgb(1, 56, 101);
+$gray-d: rgb(160, 165, 180);
+$gray-l: rgb(214, 219, 232);
+$blue: 	rgb(1, 158, 200);
+$green: rgb(131, 211, 0);
+$red: rgb(232, 0, 42);
 
 @mixin default-anim {
     transition: all .2s ease;

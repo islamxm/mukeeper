@@ -85,6 +85,11 @@ function js() {
 }
 
 
+// function json() {
+//     return src(path.src.js)
+//         .pipe()
+// }
+
 
 /* CSS */
 function css() {
