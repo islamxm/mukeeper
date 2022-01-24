@@ -1,4 +1,4 @@
-import requestStatus from './requestStatus';
+import {requestStatus} from './requestStatus';
 
 export function requestPost(url, body, async, login, pass) {
     const request = new XMLHttpRequest;

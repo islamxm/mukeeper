@@ -1,7 +1,7 @@
-export function requestError() {
-    const modalError = document.querySelector('#modalError');
+import {preloader} from './preloader';
+import MicroModal from 'micromodal';
 
-    if(modalError) {
-        modalError.classList.add('is-open');
-    }
+export function requestError() {
+    preloader.hide();
+    MicroModal.show('modalError');
 }
