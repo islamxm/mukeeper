@@ -8,7 +8,6 @@ import { eventTabs } from './components/eventTabs';
 import { newsSlider } from './components/newsSlider';
 import { charSlider } from './components/charSlider';
 import { faqAccordion } from './components/faqAccordion';
-import { eventRequest } from './components/eventRequest';
  
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -18,7 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
     newsSlider();
     charSlider();
     faqAccordion();
-    eventRequest();
     
 
 
