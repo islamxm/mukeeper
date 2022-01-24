@@ -8,26 +8,40 @@
     <link rel="stylesheet" href="./css/style.min.css">
 </head>
 <body>
+
+
+    <!-- PRELOADE -->
+    <div class="preloader">
+        <div class="preloader__layer">
+            <div class="preloader__content">
+                <div class="preloader__item">
+                    <img src="./img/preloader.gif" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <div class="wrapper">
         <header class="header">
     <div class="container">
         <div class="header__inner">
 
             <div class="header__nav header__nav-left">
-                <a href="#" class="header__nav_item">Главная</a>
-                <a href="#" class="header__nav_item">Регистрация</a>
-                <a href="#" class="header__nav_item">Скачать</a>
+                <a href="index.html" class="header__nav_item">Главная</a>
+                <a href="reg-page.html" class="header__nav_item">Регистрация</a>
+                <a href="download-page.html" class="header__nav_item">Скачать</a>
             </div>
-            <a href="#" class="header__logo">
+            <a href="index.html" class="header__logo">
                 <picture>
                     <source type="image/webp" srcset="">
                     <img src="./img/logo@1x.png" alt="Logotype">
                 </picture>
             </a>
             <div class="header__nav header__nav-right">
-                <a href="#" class="header__nav_item">Новости</a>
-                <a href="#" class="header__nav_item">FAQ</a>
-                <a href="#" class="header__nav_item header__nav_item_login">
+                <a href="news-page.html" class="header__nav_item">Новости</a>
+                <a href="faq-page.html" class="header__nav_item">FAQ</a>
+                <a href="acc-page.html" class="header__nav_item header__nav_item_login">
                     <div class="login__icon">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M18.7504 12.9165C18.4188 12.9165 18.1009 13.0482 17.8665 13.2826C17.632 13.517 17.5004 13.835 17.5004 14.1665V15.4165C17.5004 15.969 17.2809 16.4989 16.8902 16.8896C16.4995 17.2803 15.9695 17.4998 15.417 17.4998H14.167C13.8355 17.4998 13.5175 17.6315 13.2831 17.866C13.0487 18.1004 12.917 18.4183 12.917 18.7498C12.917 19.0814 13.0487 19.3993 13.2831 19.6337C13.5175 19.8681 13.8355 19.9998 14.167 19.9998H15.417C16.6322 19.9985 17.7972 19.5152 18.6565 18.6559C19.5157 17.7967 19.999 16.6317 20.0004 15.4165V14.1665C20.0004 13.835 19.8687 13.517 19.6342 13.2826C19.3998 13.0482 19.0819 12.9165 18.7504 12.9165Z" fill="#FDFBE5"/>
@@ -640,6 +654,40 @@
     </div>
 </footer>
     </div>
+
+
+    <div class="modal__error" id="modalError" aria-hidden="true">
+
+        <div class="modal__error_layer" tabindex="-1" data-micromodal-close>
+        
+          <div class="modal__error_wr" role="dialog" aria-modal="true" aria-labelledby="modal-1-title" >
+      
+            <div class="modal__error_content" id="modal-1-content">
+                <button class="modal__error_close" data-micromodal-close>
+                    <img src="./img/modal-close.svg">
+                </button>
+                <div class="sectionHead">
+                    <h2 class="sectionHead__title">404 page not found</h2>
+                </div>
+                <h3 class="modal__error_subtitle">
+                    Упс... похоже что-то пошло не так
+                </h3>
+                <div class="modal__error_text">
+                    <p>
+                        Похоже возникли проблемы с интернетом 
+                        или пропал доступ к серверу. 
+                        Попробуйте перезагрузить страницу 
+                        или вернитесь на главную
+                    </p>
+                </div>
+                <div class="modal__error_btn">
+                    <button class="button" data-micromodal-close>Вернуться назад</button>
+                </div>
+            </div>
+      
+          </div>
+        </div>
+      </div>
    
 
 
