@@ -13,30 +13,67 @@ import { faqAccordion } from './components/faqAccordion';
 
 // Test$$$$$$$$$$
 import { requestGet } from './components/requestGet';
-import { checkServer } from './components/checkServer';
+// import { checkServer } from './components/checkServer';
+import { requestStatus } from "./components/requestStatus";
+import { generateEventSlide } from "./components/generateEventSlide";
+import { emptyLink } from "./components/emtyLink";
+import { eventTimer } from './components/eventTimer';
+
+
+// requestStatus.loading();
  
 document.addEventListener('DOMContentLoaded', () => {
 
+    
+
+    // requestStatus.success();
     // ACTIVE
     MicroModal.init();
 
+
+    //DOM elements
     eventSlider();
     eventTabs();
     newsSlider();
     charSlider();
     faqAccordion();
 
+    // Check
+    emptyLink();
 
+    eventTimer(1017);
+
+
+    //AJAX
+    requestGet('https://mukeeper.com/eventTime.php?ajax=true');
+
+    // const date = new Date();
+
+    // let seconds = date.getTime() / 1000;
+
+    // console.log(seconds);
+    // console.log(date.getTime());
+
+    
+
+
+    
+    
+
+    
+
+
+    
     //Requests
 
     //Test$$$$$$$$$$$$$$$
-    const links = document.querySelectorAll('a');
+    // const links = document.querySelectorAll('a');
 
-    links.forEach(link => {
-        link.addEventListener('click', (e) => {
-            checkServer(e, link);
-        });
-    });
+    // links.forEach(link => {
+    //     link.addEventListener('click', (e) => {
+    //         checkServer(e, link);
+    //     });
+    // });
     
 
 });
