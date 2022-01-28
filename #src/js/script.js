@@ -41,8 +41,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Check
     emptyLink();
 
-    eventTimer(1017);
-
 
     //AJAX
     requestGet('https://mukeeper.com/eventTime.php?ajax=true');

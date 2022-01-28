@@ -37,6 +37,7 @@
     ">5%"
   ],
   "dependencies": {
+    "easytimer.js": "^4.5.1",
     "micromodal": "^0.4.10",
     "swiper": "^7.4.1"
   }

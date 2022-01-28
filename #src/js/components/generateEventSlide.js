@@ -4,29 +4,7 @@ import { eventTimer } from "./eventTimer";
 
 
 export function generateEventSlide(img, name, startTime) {    
-
-    //Timer components
-    let deadline = (startTime * 1000) + Date.parse(new Date);
-
-    function getTimerRemaining(endtime) {
-        const t = endtime - Date.parse(new Date);
-        let days = Math.floor(t / (1000 * 60 * 60 * 24));
-        let hours = Math.floor((t / (1000 * 60 * 60) % 24));
-        let minutes = Math.floor((t / 1000 / 60) % 60);
-        let seconds = Math.floor((t / 1000) % 60);
-
-        return {
-            'total': t,
-            'days': days,
-            'hours': hours,
-            'minutes': minutes,
-            'seconds': seconds
-        };
-    }
-
-
-
-
+    
     const eventSliderWrapper = document.querySelector('.event__slider_wr');
     const eventSlide = document.createElement('div');
 
