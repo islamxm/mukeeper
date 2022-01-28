@@ -20,10 +20,10 @@ export function eventTimer(i, cS, cC, dS, cA, dD, bC) {
         }
     
     });
-    
-    invasion.innerHTML = invasionTimer.getTimeValues().toString();
+
+    invasion.innerHTML = invasionTimer.getTimeValues().toString(['days', 'hours', 'minutes', 'seconds']);
     invasionTimer.addEventListener('secondsUpdated', function(e){
-        invasion.innerHTML = invasionTimer.getTimeValues().toString();
+        invasion.innerHTML = invasionTimer.getTimeValues().toString(['days', 'hours', 'minutes', 'seconds']);
     });
 
 
@@ -37,9 +37,9 @@ export function eventTimer(i, cS, cC, dS, cA, dD, bC) {
         }
     });
 
-    castleSiege.innerHTML = castleSiegeTimer.getTimeValues().toString();
+    castleSiege.innerHTML = castleSiegeTimer.getTimeValues().toString(['days', 'hours', 'minutes', 'seconds']);
     castleSiegeTimer.addEventListener('secondsUpdated', function(e){
-        castleSiege.innerHTML = castleSiegeTimer.getTimeValues().toString();
+        castleSiege.innerHTML = castleSiegeTimer.getTimeValues().toString(['days', 'hours', 'minutes', 'seconds']);
     });
 
 
@@ -53,9 +53,9 @@ export function eventTimer(i, cS, cC, dS, cA, dD, bC) {
         }
     });
 
-    chaosCastle.innerHTML = chaosCastleTimer.getTimeValues().toString;
+    chaosCastle.innerHTML = chaosCastleTimer.getTimeValues().toString(['days', 'hours', 'minutes', 'seconds']);
     chaosCastleTimer.addEventListener('secondsUpdated', function(e){
-        chaosCastle.innerHTML = chaosCastleTimer.getTimeValues().toString();
+        chaosCastle.innerHTML = chaosCastleTimer.getTimeValues().toString(['days', 'hours', 'minutes', 'seconds']);
     });
 
 
@@ -69,9 +69,9 @@ export function eventTimer(i, cS, cC, dS, cA, dD, bC) {
         }
     });
 
-    devilSquare.innerHTML = chaosCastleTimer.getTimeValues().toString;
+    devilSquare.innerHTML = devilSquareTimer.getTimeValues().toString(['days', 'hours', 'minutes', 'seconds']);
     devilSquareTimer.addEventListener('secondsUpdated', function(e){
-        devilSquare.innerHTML = chaosCastleTimer.getTimeValues().toString();
+        devilSquare.innerHTML = devilSquareTimer.getTimeValues().toString(['days', 'hours', 'minutes', 'seconds']);
     });
 
 
@@ -84,9 +84,9 @@ export function eventTimer(i, cS, cC, dS, cA, dD, bC) {
         }
     });
 
-    crywolfAttack.innerHTML = chaosCastleTimer.getTimeValues().toString;
+    crywolfAttack.innerHTML = crywolfAttackTimer.getTimeValues().toString(['days', 'hours', 'minutes', 'seconds']);
     crywolfAttackTimer.addEventListener('secondsUpdated', function(e){
-        crywolfAttack.innerHTML = chaosCastleTimer.getTimeValues().toString();
+        crywolfAttack.innerHTML = crywolfAttackTimer.getTimeValues().toString(['days', 'hours', 'minutes', 'seconds']);
     });
 
 
@@ -99,9 +99,9 @@ export function eventTimer(i, cS, cC, dS, cA, dD, bC) {
         }
     });
 
-    dropDavis.innerHTML = chaosCastleTimer.getTimeValues().toString;
+    dropDavis.innerHTML = dropDavisTimer.getTimeValues().toString(['days', 'hours', 'minutes', 'seconds']);
     dropDavisTimer.addEventListener('secondsUpdated', function(e){
-        dropDavis.innerHTML = chaosCastleTimer.getTimeValues().toString();
+        dropDavis.innerHTML = dropDavisTimer.getTimeValues().toString(['days', 'hours', 'minutes', 'seconds']);
     });
 
 
@@ -114,9 +114,9 @@ export function eventTimer(i, cS, cC, dS, cA, dD, bC) {
         }
     });
 
-    bloodCastle.innerHTML = chaosCastleTimer.getTimeValues().toString;
+    bloodCastle.innerHTML = bloodCastleTimer.getTimeValues().toString(['days', 'hours', 'minutes', 'seconds']);
     bloodCastleTimer.addEventListener('secondsUpdated', function(e){
-        bloodCastle.innerHTML = chaosCastleTimer.getTimeValues().toString();
+        bloodCastle.innerHTML = bloodCastleTimer.getTimeValues().toString(['days', 'hours', 'minutes', 'seconds']);
     });
 
     
