@@ -1,10 +1,24 @@
-import { eventTimer } from "./eventTimer";
+
+export function generateEventSlide(img, name, link, startTime) {    
 
 
-
-
-export function generateEventSlide(img, name, startTime) {    
+    //Times 
     
+
+    function getZero(num) {
+        if (num >= 0 && num < 10) {
+            return `0${num}`;
+        } else {
+            return num;
+        }
+    }
+
+    let t = startTime * 1000;
+    let days = getZero(Math.floor(t / (1000 * 60 * 60 * 24)));
+    let hours = getZero(Math.floor((t / (1000 * 60 * 60) % 24)));
+    let minutes = getZero(Math.floor((t / 1000 / 60) % 60));
+    let seconds = getZero(Math.floor((t / 1000) % 60));
+
     const eventSliderWrapper = document.querySelector('.event__slider_wr');
     const eventSlide = document.createElement('div');
 
@@ -22,14 +36,14 @@ export function generateEventSlide(img, name, startTime) {
                 <div class="event__slide_content_head_label">
                     EVENT
                 </div>
-                <div class="event__slide_content_head_title">
+                <a href="${link}" class="event__slide_content_head_title">
                     ${name}
-                </div>
+                </a>
             </div>
             <div class="event__slide_content_timer">
                 <div class="event__slide_content_timer_label">EVENT START </div>
-                <div class="event__slide_content_timer_value">     
-                    
+                <div class="event__slide_content_timer_value" data-time="${startTime}">     
+                    ${days}:${hours}:${minutes}:${seconds}
                 </div>
             </div>
         </div>
@@ -38,7 +52,6 @@ export function generateEventSlide(img, name, startTime) {
     if(eventSliderWrapper) {
         eventSliderWrapper.append(eventSlide);
     }
-
 
 
     

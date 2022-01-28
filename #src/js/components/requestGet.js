@@ -1,7 +1,19 @@
 import {requestStatus} from './requestStatus';
 // DOMAction
 import {generateEventSlide} from './generateEventSlide';
-import { eventTimer } from './eventTimer';
+
+// Img path
+let imgUrls = {
+    invasion: './img/event-invasion@1x.png',
+    castleSiege: './img/event-castle_siege@1x.png',
+    chaosCastle: './img/event-chaos_castle@1x.png',
+    devilSquare: './img/event-devil_square@1x.png',
+    crywolfAttack: './img/event-crywolf_attack@1x.png',
+    dropDavias: './img/event-drop_davias@1x.png',
+    bloodCastle: './img/event-blood_castle@1x.png'
+};
+
+
 
 export function requestGet(url, async, login, pass) {
     const request = new XMLHttpRequest;
@@ -11,18 +23,35 @@ export function requestGet(url, async, login, pass) {
 
     if(request.status == 200 && request.readyState == 4) {
         let obj = JSON.parse(request.response);
+        let allEvents = obj.allEvents;
 
-        eventTimer(
-            obj.allEvents["Golden Invasion"].startSeconds,
-            obj.allEvents["Castle Siege"].startSeconds,
-            obj.allEvents["Chaos Castle"].startSeconds,
-            obj.allEvents["Devil Square"].startSeconds,
-            obj.allEvents["CryWolf Attack"].startSeconds,
-            obj.allEvents["Event Drop"].startSeconds,
-            obj.allEvents["Blood Castle"].startSeconds                 
-        );
-        // generateEventSlide('', obj.data.name, obj.startSeconds);
-        //generateEventSlide(obj.allEvents["Blood Castle"].data.images, obj.allEvents["Blood Castle"].data.name, );
+ 
+
+        function sortObject(obj) {
+            var arr = [];
+            for (var prop in obj) {
+                if (obj.hasOwnProperty(prop)) {
+                    arr.push({
+                        'key': prop,
+                        'value': obj[prop]
+                    });
+                }
+            }
+            arr.sort(function(a, b) { 
+                return a.value.startSeconds - b.value.startSeconds;
+            
+            });
+            return arr;
+        }
+        let arr = sortObject(allEvents);
+
+        arr.forEach(i => {
+            console.log(i);
+            console.log(typeof(i));
+
+            generateEventSlide('./img/event-img-test.png', i.value.data.name, i.value.data.link, i.value.startSeconds);
+        });
+        
 
         requestStatus.success();
         
