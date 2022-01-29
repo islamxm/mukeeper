@@ -11,15 +11,29 @@ export function eventTimer() {
                 countdown: true,
                 startValues: {
                     seconds: time.dataset.time
+                },
+                target: {
+                    seconds: 0
                 }
-            })
+            });
             tm.addEventListener('secondsUpdated', (e) => {
                 time.innerHTML = tm.getTimeValues().toString(['days', 'hours', 'minutes', 'seconds']);
+                time.dataset.time = tm.getTotalTimeValues().seconds;
+
+                // if(tm.getTimeValues().toString() == 0) {
+                //     console.log('end');
+                // }
             });
-    
+
+            
+
+            
+            
             tm.addEventListener('targetAchieved', (e) => {
-                requestGet('https://mukeeper.com/eventTime.php?ajax=true');
+                // requestGet('https://mukeeper.com/eventTime.php?ajax=true');
+                
             });
+
         });
     }
     

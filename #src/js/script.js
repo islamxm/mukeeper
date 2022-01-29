@@ -45,28 +45,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //AJAX
     requestGet('https://mukeeper.com/eventTime.php?ajax=true');
-    
-    const allTimes = document.querySelectorAll('.event__slide_content_timer_value');
-
 
     
 
-    allTimes.forEach(time => {
-        var tm = new Timer();
-        tm.start({
-            countdown: true,
-            startValues: {
-                seconds: time.dataset.time
-            }
-        })
-        tm.addEventListener('secondsUpdated', (e) => {
-            time.innerHTML = tm.getTimeValues().toString(['days', 'hours', 'minutes', 'seconds']);
-        });
+    // eventTimer();
 
-        tm.addEventListener('targetAchieved', (e) => {
-            requestGet('https://mukeeper.com/eventTime.php?ajax=true');
-        });
-    });
+    
+    // eventTimer()
 
     // const date = new Date();
 

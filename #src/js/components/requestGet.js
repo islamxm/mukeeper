@@ -1,6 +1,8 @@
 import {requestStatus} from './requestStatus';
 // DOMAction
 import {generateEventSlide} from './generateEventSlide';
+import { eventTimer } from './eventTimer';
+
 
 // Img path
 let imgUrls = {
@@ -16,16 +18,15 @@ let imgUrls = {
 
 
 export function requestGet(url, async, login, pass) {
+    requestStatus.loading();
     const request = new XMLHttpRequest;
     request.open('GET', url, async, login, pass);
     request.send();
-    requestStatus.loading();
+    
 
     if(request.status == 200 && request.readyState == 4) {
         let obj = JSON.parse(request.response);
         let allEvents = obj.allEvents;
-
- 
 
         function sortObject(obj) {
             var arr = [];
@@ -44,15 +45,13 @@ export function requestGet(url, async, login, pass) {
             return arr;
         }
         let arr = sortObject(allEvents);
-
+        console.log(arr.length);
         arr.forEach(i => {
-            console.log(i);
-            console.log(typeof(i));
-
             generateEventSlide('./img/event-img-test.png', i.value.data.name, i.value.data.link, i.value.startSeconds);
         });
-        
 
+        // eventTimer();
+        
         requestStatus.success();
         
     } else {

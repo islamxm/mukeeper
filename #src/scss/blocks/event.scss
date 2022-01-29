@@ -146,6 +146,14 @@
         &_content {
             padding: 0 57px;
 
+            &:nth-child(2) {
+                display: none;
+            }
+
+            &:nth-child(3) {
+                display: none;
+            }
+
             &_item {
                 display: flex;
                 justify-content: space-between;

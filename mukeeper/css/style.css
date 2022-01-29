@@ -1165,6 +1165,12 @@ html {
 .event__tabs_content {
   padding: 0 57px;
 }
+.event__tabs_content:nth-child(2) {
+  display: none;
+}
+.event__tabs_content:nth-child(3) {
+  display: none;
+}
 .event__tabs_content_item {
   display: -webkit-box;
   display: -ms-flexbox;

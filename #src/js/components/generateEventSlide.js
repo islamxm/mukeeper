@@ -1,3 +1,4 @@
+import Timer from "easytimer.js";
 
 export function generateEventSlide(img, name, link, startTime) {    
 
@@ -52,6 +53,27 @@ export function generateEventSlide(img, name, link, startTime) {
     if(eventSliderWrapper) {
         eventSliderWrapper.append(eventSlide);
     }
+
+    var timer = new Timer();
+    timer.start({
+        countdown: true,
+        startValues: {
+            seconds: startTime,
+        },
+        target: {
+            seconds: 0
+        }
+    });
+
+    const elementForTimer = document.querySelector('.event__slide_content_timer_value');
+
+    timer.addEventListener('secondsUpdated', () => {
+        elementForTimer.innerHTML = timer.getTimeValues().toString(['days', 'hours', 'minutes', 'seconds']);
+    });
+
+    timer.addEventListener('targetAchieved', () => {
+        console.log('end');
+    })
 
 
     
