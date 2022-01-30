@@ -19,6 +19,8 @@ import { generateEventSlide } from "./components/generateEventSlide";
 import { emptyLink } from "./components/emtyLink";
 import { eventTimer } from './components/eventTimer';
 import Timer from "easytimer.js";
+import { mainTimer } from "./components/mainTimer";
+
 
 
 // requestStatus.loading();
@@ -38,6 +40,8 @@ document.addEventListener('DOMContentLoaded', () => {
     newsSlider();
     charSlider();
     faqAccordion();
+
+    mainTimer();
 
     // Check
     emptyLink();
