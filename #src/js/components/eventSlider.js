@@ -8,7 +8,7 @@ export const eventSlider = () => {
             nextEl: '.slider__btn_next',
             prevEl: '.slider__btn_prev',
             disabledClass: 'slider__btn_disabled',
-            lockClass: 'slider__btn_disabled',
+            // lockClass: 'slider__btn_disabled',
         },
     });
 };

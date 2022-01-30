@@ -45,7 +45,7 @@ export function requestGet(url, async, login, pass) {
             return arr;
         }
         let arr = sortObject(allEvents);
-        console.log(arr.length);
+
         arr.forEach(i => {
             generateEventSlide('./img/event-img-test.png', i.value.data.name, i.value.data.link, i.value.startSeconds);
         });

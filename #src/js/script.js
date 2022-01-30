@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     //DOM elements
-    eventSlider();
+    
     eventTabs();
     newsSlider();
     charSlider();
@@ -46,9 +46,24 @@ document.addEventListener('DOMContentLoaded', () => {
     //AJAX
     requestGet('https://mukeeper.com/eventTime.php?ajax=true');
 
+    eventSlider();
+
     
 
-    // eventTimer();
+    eventTimer();
+
+    const eventSliderParent = document.querySelector('.event__slider_wr');
+
+    const activeEvents = document.querySelectorAll('.event__slide_content_timer_value');
+
+    activeEvents.forEach(event => {
+        if(event.dataset.time == 0) {
+
+            eventSliderParent.innerHTML = '';
+            requestGet('https://mukeeper.com/eventTime.php?ajax=true');
+            
+        }
+    });
 
     
     // eventTimer()
