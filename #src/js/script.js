@@ -43,29 +43,73 @@ document.addEventListener('DOMContentLoaded', () => {
     emptyLink();
 
 
-    //AJAX
     requestGet('https://mukeeper.com/eventTime.php?ajax=true');
 
     eventSlider();
-
     eventTimer();
 
 
-    const eventSliderParent = document.querySelector('.event__slider_wr');
+    // let timerId = setInterval(function() {
+    //     
+    //     let activeEvent = document.querySelector('.event__slide_content_timer_value').dataset.time;
+        
+    //     return activeEvent;
 
-    const activeEvent = document.querySelector('.event__slide_content_timer_value');
-
-
-    console.log(activeEvent.dataset.time);
+    // }, 1000);
+    let eventSliderParent = document.querySelector('.event__slider_wr');
 
     setInterval(function() {
-        setTimeout(function(){
+        let activeEvent = document.querySelector('.event__slide_content_timer_value').dataset.time;
+
+        if(activeEvent == 0) {
             eventSliderParent.innerHTML = '';
-            
             requestGet('https://mukeeper.com/eventTime.php?ajax=true');
-            console.log('request success');
-        }, activeEvent.dataset.time * 1000);
-    }, activeEvent.dataset.time * 1000);
+            eventSlider();
+            eventTimer();
+        }
+    }, 1000);
+
+    
+    
+
+
+    
+    
+
+
+    // setInterval(function() {
+    //     requestGet('https://mukeeper.com/eventTime.php?ajax=true');
+
+    //     eventSlider();
+
+    //     eventTimer();
+    // }, 1000);
+    
+
+
+    // const eventSliderParent = document.querySelector('.event__slider_wr');
+
+    // const activeEvent = document.querySelector('.event__slide_content_timer_value');
+
+
+    // console.log(activeEvent.dataset.time);
+
+    // setInterval(function() {
+    //     console.log('interval starts')
+    //     setTimeout(function(){
+    //         eventSliderParent.innerHTML = '';
+            
+    //         requestGet('https://mukeeper.com/eventTime.php?ajax=true');
+    //         console.log('request success');
+    //     }, activeEvent.dataset.time * 1000);
+    // }, activeEvent.dataset.time * 1000);
+
+
+    // setInterval(function(){
+    //     console.log('start interval');
+    //     eventSliderParent.innerHTML = '';
+    //     requestGet('https://mukeeper.com/eventTime.php?ajax=true');
+    // }, 10000);
 
     
 

@@ -44,7 +44,7 @@ export function generateEventSlide(img, name, link, startTime) {
             <div class="event__slide_content_timer">
                 <div class="event__slide_content_timer_label">EVENT START </div>
                 <div class="event__slide_content_timer_value" data-time="${startTime}">     
-                    
+                    ${days}:${hours}:${minutes}:${seconds}
                 </div>
             </div>
         </div>
