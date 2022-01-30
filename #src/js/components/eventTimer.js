@@ -18,7 +18,7 @@ export function eventTimer() {
             });
             tm.addEventListener('secondsUpdated', (e) => {
                 time.innerHTML = tm.getTimeValues().toString(['days', 'hours', 'minutes', 'seconds']);
-                time.dataset.time = tm.getTotalTimeValues().seconds;
+                // time.dataset.time = tm.getTotalTimeValues().seconds;
 
                 // if(tm.getTimeValues().toString() == 0) {
                 //     console.log('end');

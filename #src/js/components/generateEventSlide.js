@@ -54,28 +54,32 @@ export function generateEventSlide(img, name, link, startTime) {
         eventSliderWrapper.append(eventSlide);
     }
 
-    var timer = new Timer();
-    timer.start({
-        countdown: true,
-        startValues: {
-            seconds: startTime,
-        },
-        target: {
-            seconds: 0
-        }
-    });
+    // var timer = new Timer();
+    // timer.start({
+    //     countdown: true,
+    //     startValues: {
+    //         seconds: startTime,
+    //     },
+    //     target: {
+    //         seconds: 0
+    //     }
+    // });
 
-    const elementForTimer = document.querySelector('.event__slide_content_timer_value');
+    // const elementForTimer = document.querySelectorAll('.event__slide_content_timer_value');
 
-    elementForTimer.innerHTML = timer.getTimeValues().toString(['days', 'hours', 'minutes', 'seconds']);
+    // elementForTimer.forEach(i => {
+    //     i.innerHTML = timer.getTimeValues().toString(['days', 'hours', 'minutes', 'seconds']);
+    // })
 
-    timer.addEventListener('secondsUpdated', () => {
-        elementForTimer.innerHTML = timer.getTimeValues().toString(['days', 'hours', 'minutes', 'seconds']);
-    });
+    // timer.addEventListener('secondsUpdated', () => {
+    //     elementForTimer.forEach(i => {
+    //         i.innerHTML = timer.getTimeValues().toString(['days', 'hours', 'minutes', 'seconds']);
+    //     })
+    // });
 
-    timer.addEventListener('targetAchieved', () => {
-        console.log('end');
-    });
+    // timer.addEventListener('targetAchieved', () => {
+    //     console.log('timer end')
+    // });
 
 
     

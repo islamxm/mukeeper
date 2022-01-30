@@ -48,22 +48,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
     eventSlider();
 
-    
-
     eventTimer();
+
 
     const eventSliderParent = document.querySelector('.event__slider_wr');
 
-    const activeEvents = document.querySelectorAll('.event__slide_content_timer_value');
+    const activeEvent = document.querySelector('.event__slide_content_timer_value');
 
-    activeEvents.forEach(event => {
-        if(event.dataset.time == 0) {
 
+    console.log(activeEvent.dataset.time);
+
+    setInterval(function() {
+        setTimeout(function(){
             eventSliderParent.innerHTML = '';
-            requestGet('https://mukeeper.com/eventTime.php?ajax=true');
             
-        }
-    });
+            requestGet('https://mukeeper.com/eventTime.php?ajax=true');
+            console.log('request success');
+        }, activeEvent.dataset.time * 1000);
+    }, activeEvent.dataset.time * 1000);
+
+    
+
+   
 
     
     // eventTimer()
@@ -75,28 +81,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // console.log(seconds);
     // console.log(date.getTime());
 
-    
-
-
-    
-
-    
-    
-
-    
-
-
-    
-    //Requests
-
-    //Test$$$$$$$$$$$$$$$
-    // const links = document.querySelectorAll('a');
-
-    // links.forEach(link => {
-    //     link.addEventListener('click', (e) => {
-    //         checkServer(e, link);
-    //     });
-    // });
     
 
 });
