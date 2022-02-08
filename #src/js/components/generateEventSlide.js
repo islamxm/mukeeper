@@ -26,6 +26,9 @@ export function generateEventSlide(img, name, link, startTime) {
     eventSlide.classList.add('event__slide', 'swiper-slide');
 
     eventSlide.innerHTML = `
+        <button class="event__slide_push">
+            <img src="./img/pus.png" alt="">
+        </button>
         <div class="event__slide_img">
             <picture>
                 <source type="image/webp" srcset="">

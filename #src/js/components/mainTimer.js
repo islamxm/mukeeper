@@ -34,6 +34,12 @@ export function mainTimer() {
     });
 
     mainTimerEl.addEventListener('targetAchieved', () => {
-        mainTimerParent.style.display = 'none';
+        if(mainTimerParent.dataset.hide == 'true') {
+            mainTimerParent.style.display = 'none';
+        }
+
+        if(mainTimerParent.dataset.hide == 'false') {
+            return;
+        }
     });
 }
