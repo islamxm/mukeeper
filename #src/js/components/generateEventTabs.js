@@ -7,7 +7,7 @@ export function generateEventTabs() {
 
     // request
     const req = new XMLHttpRequest;
-    req.open('GET', 'http://test.mukeeper.com/ru/statistic');
+    req.open('GET', 'https://test.mukeeper.com/ru/statistic');
     req.send();
 
     
