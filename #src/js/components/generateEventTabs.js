@@ -10,6 +10,11 @@ export function generateEventTabs() {
     req.open('GET', 'https://test.mukeeper.com/ru/statistic');
     req.send();
 
+
+    console.log(req.readyState);
+    console.log(req.status);
+    console.log(req.statusText);
+
     
     if(req.status == 200 && req.readyState == 4) {
         console.log(req.response);
@@ -44,7 +49,7 @@ export function generateEventTabs() {
     } 
 
     if(req.status != 200) {
-        console.log(req.readyState);
+        
     }
 
 
