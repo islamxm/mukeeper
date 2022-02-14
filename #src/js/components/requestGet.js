@@ -2,6 +2,8 @@ import {requestStatus} from './requestStatus';
 // DOMAction
 import {generateEventSlide} from './generateEventSlide';
 import { eventTimer } from './eventTimer';
+import { generateServerTab } from './generateServerTab';
+import { generatePlayersTab } from './generatePlayersTab';
 
 
 // Img path
@@ -25,30 +27,51 @@ export function requestGet(url, async, login, pass) {
     
 
     if(request.status == 200 && request.readyState == 4) {
+
         let obj = JSON.parse(request.response);
-        let allEvents = obj.allEvents;
 
-        function sortObject(obj) {
-            var arr = [];
-            for (var prop in obj) {
-                if (obj.hasOwnProperty(prop)) {
-                    arr.push({
-                        'key': prop,
-                        'value': obj[prop]
-                    });
+
+        if(url == 'https://mukeeper.com/eventTime.php?ajax=true') {
+            console.log('def');
+            console.log(obj)
+
+            let allEvents = obj.allEvents;
+
+            function sortObject(obj) {
+                var arr = [];
+                for (var prop in obj) {
+                    if (obj.hasOwnProperty(prop)) {
+                        arr.push({
+                            'key': prop,
+                            'value': obj[prop]
+                        });
+                    }
                 }
+                arr.sort(function(a, b) { 
+                    return a.value.startSeconds - b.value.startSeconds;
+                
+                });
+                return arr;
             }
-            arr.sort(function(a, b) { 
-                return a.value.startSeconds - b.value.startSeconds;
-            
+            let arr = sortObject(allEvents);
+    
+            arr.forEach(i => {
+                generateEventSlide('./img/event-img-test.png', i.value.data.name, i.value.data.link, i.value.startSeconds); 
             });
-            return arr;
-        }
-        let arr = sortObject(allEvents);
+        } else {
+            //test
+            console.log('done');
+            console.log(obj);
 
-        arr.forEach(i => {
-            generateEventSlide('./img/event-img-test.png', i.value.data.name, i.value.data.link, i.value.startSeconds); 
-        });
+            console.log(obj.servers[0].status);
+
+            //action 
+
+            generateServerTab(obj);
+            generatePlayersTab(obj);
+
+        }
+        
 
         // eventTimer();
         

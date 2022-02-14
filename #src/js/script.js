@@ -20,7 +20,6 @@ import { emptyLink } from "./components/emtyLink";
 import { eventTimer } from './components/eventTimer';
 import Timer from "easytimer.js";
 import { mainTimer } from "./components/mainTimer";
-import { generateEventTabs } from './components/generateEventTabs';
 
 
 
@@ -37,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //DOM elements
     
-    eventTabs();
+    
     newsSlider();
     charSlider();
     faqAccordion();
@@ -47,29 +46,34 @@ document.addEventListener('DOMContentLoaded', () => {
     // Check
     emptyLink();
 
-    generateEventTabs();
+    // generateEventTabs();
+
+    
 
 
     requestGet('https://mukeeper.com/eventTime.php?ajax=true');
 
     eventSlider();
-    // eventTimer();
+    eventTimer();
 
-    // let eventSliderParent = document.querySelector('.event__slider_wr');
+    let eventSliderParent = document.querySelector('.event__slider_wr');
 
-    // setInterval(function() {
-    //     let activeEvent = document.querySelector('.event__slide_content_timer_value').dataset.time;
+    setInterval(function() {
+        let activeEvent = document.querySelector('.event__slide_content_timer_value').dataset.time;
 
-    //     if(activeEvent == 0) {
-    //         eventSliderParent.innerHTML = '';
-    //         requestGet('https://mukeeper.com/eventTime.php?ajax=true');
-    //         eventSlider();
-    //         eventTimer();
-    //     }
-    // }, 1000);
+        if(activeEvent == 0) {
+            eventSliderParent.innerHTML = '';
+            requestGet('https://mukeeper.com/eventTime.php?ajax=true');
+            eventSlider();
+            eventTimer();
+        }
+    }, 1000);
+
 
     
 
+    requestGet('https://test.mukeeper.com/ru/statistic');
+    eventTabs();
     
 
 });
